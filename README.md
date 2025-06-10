@@ -14,80 +14,80 @@ Essas melhorias visam tornar o sistema mais acessível e responsivo, proporciona
 
 **Caso tenha sugestões ou encontre pontos que podem ser refinados, fique à vontade para contribuir! **
 
-// PSEUDOCÓDIGO — Próxima Etapa: Criar Fluxograma
+// PSEUDOCÓDIGO — Próxima Etapa: Criar Fluxograma  
 
-INÍCIO
-    Exibir mensagem de boas-vindas
-    Solicitar valor inicial do estacionamento
-    Ler entrada do usuário
-    Limpar tela
-    Solicitar valor por hora adicional
-    Ler entrada do usuário
-    Limpar tela
-    Exibir menu principal
+INÍCIO  
+    Exibir mensagem de boas-vindas  
+    Solicitar valor inicial do estacionamento  
+    Ler entrada do usuário  
+    Limpar tela  
+    Solicitar valor por hora adicional  
+    Ler entrada do usuário  
+    Limpar tela  
+    Exibir menu principal  
 
-MENU PRINCIPAL
-    Enquanto usuário não escolher "Encerrar"
-        Exibir opções do menu
-        Ler entrada do usuário
-        Se opção for "1" então
-            Executar função AdicionarVeiculo()
-        Se opção for "2" então
-            Executar função RemoverVeiculo()
-        Se opção for "3" então
-            Executar função ListarVeiculos()
-        Se opção for "4" então
-            Encerrar programa
-    FIM ENQUANTO
+MENU PRINCIPAL  
+    Enquanto usuário não escolher "Encerrar"  
+        Exibir opções do menu  
+        Ler entrada do usuário  
+        Se opção for "1" então  
+            Executar função AdicionarVeiculo()  
+        Se opção for "2" então  
+            Executar função RemoverVeiculo()  
+        Se opção for "3" então  
+            Executar função ListarVeiculos()  
+        Se opção for "4" então  
+            Encerrar programa  
+    FIM ENQUANTO  
 
-FUNÇÃO AdicionarVeiculo()
-    Limpar tela
-    Solicitar placa do veículo
-    Ler entrada do usuário
-    Exibir mensagem de sucesso
-    Aguardar tecla para retornar ao menu
-    Limpar tela
-    Exibir menu
+FUNÇÃO AdicionarVeiculo()  
+    Limpar tela  
+    Solicitar placa do veículo  
+    Ler entrada do usuário  
+    Exibir mensagem de sucesso  
+    Aguardar tecla para retornar ao menu  
+    Limpar tela  
+    Exibir menu  
 
-FUNÇÃO RemoverVeiculo()
-    Limpar tela
-    Exibir mensagem: "Deseja exibir a lista de veículos? (Y/N)"
-    Ler entrada do usuário
-    Se entrada for "Y" então
-        Exibir lista de veículos
-        Solicitar placa do veículo a remover
-    Se entrada for "N" então
-        Solicitar placa diretamente
-    Se placa estiver correta então
-        Solicitar quantidade de horas estacionado
-        Ler entrada do usuário
-        Calcular valor total
-        Exibir mensagem de remoção e valor a pagar
-        Aguardar tecla para retornar ao menu
-    Se placa estiver errada então
-        Exibir mensagem: "Placa não encontrada! Deseja tentar novamente? (Y/N)"
-        Se entrada for "Y" então
-            Chamar novamente RemoverVeiculo()
-        Se entrada for "N" então
-            Retornar ao menu
-    Limpar tela
-    Exibir menu
+FUNÇÃO RemoverVeiculo()  
+    Limpar tela  
+    Exibir mensagem: "Deseja exibir a lista de veículos? (Y/N)"  
+    Ler entrada do usuário  
+    Se entrada for "Y" então  
+        Exibir lista de veículos  
+        Solicitar placa do veículo a remover  
+    Se entrada for "N" então  
+        Solicitar placa diretamente  
+    Se placa estiver correta então  
+        Solicitar quantidade de horas estacionado  
+        Ler entrada do usuário  
+        Calcular valor total  
+        Exibir mensagem de remoção e valor a pagar  
+        Aguardar tecla para retornar ao menu  
+    Se placa estiver errada então  
+        Exibir mensagem: "Placa não encontrada! Deseja tentar novamente? (Y/N)"  
+        Se entrada for "Y" então  
+            Chamar novamente RemoverVeiculo()  
+        Se entrada for "N" então  
+            Retornar ao menu  
+    Limpar tela  
+    Exibir menu  
 
-FUNÇÃO ListarVeiculos()
-    Se não houver veículos estacionados então
-        Exibir mensagem: "Não há veículos estacionados"
-    Se houver veículos estacionados então
-        Exibir lista de veículos
-    Aguardar tecla para retornar ao menu
-    Limpar tela
-    Exibir menu
+FUNÇÃO ListarVeiculos()  
+    Se não houver veículos estacionados então  
+        Exibir mensagem: "Não há veículos estacionados"  
+    Se houver veículos estacionados então  
+        Exibir lista de veículos  
+    Aguardar tecla para retornar ao menu  
+    Limpar tela  
+    Exibir menu  
 
-FUNÇÃO Encerrar()
-    Limpar tela
-    Exibir mensagem de encerramento
-    Finalizar programa
+FUNÇÃO Encerrar()  
+    Limpar tela  
+    Exibir mensagem de encerramento  
+    Finalizar programa  
 
-FIM
+FIM  
  
 --------------------------------------------------------------------------------
 
