@@ -1,5 +1,7 @@
-SISTEMA DE ESTACIONAMENTO – TRILHA WEX- END TO END ENGINEERING
-# DIO - Trilha .NET - Fundamentos
+**SISTEMA DE ESTACIONAMENTO**
+TRILHA WEX- END TO END ENGINEERING
+
+**DIO - Trilha .NET - Fundamentos**
 www.dio.me
 
 ## Melhorias no Projeto
@@ -8,7 +10,8 @@ Foram feitas algumas modificações no sistema, focadas em aprimorar a experiên
 - **Aprimoramento das funcionalidades** para otimizar o fluxo de execução e oferecer uma experiência mais dinâmica.
 - **Correções de possíveis inconsistências** e ajustes no código para garantir um funcionamento mais estável e eficiente.
 Essas melhorias visam tornar o sistema mais acessível e responsivo, proporcionando uma interação mais fluida. 
-Caso tenha sugestões ou encontre pontos que podem ser refinados, fique à vontade para contribuir! 
+
+**Caso tenha sugestões ou encontre pontos que podem ser refinados, fique à vontade para contribuir! **
 
 // PSEUDOCÓDIGO — Próxima Etapa: Criar Fluxograma
 
