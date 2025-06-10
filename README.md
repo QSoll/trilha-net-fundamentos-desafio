@@ -1,3 +1,14 @@
+Fiz algumas modificações para melhorar o funcionamento e a interação com o usuário:
+
+1- Em Adicionar veículos, a mensagem exibe a placa do carro também
+2- Em remover veículos, o sistema pergunta se o usuário deseja visualizar a lista (Y/N)
+  - Se Y - O sistema exibe a lista e pergunta qual carro o usuário quer remover
+  - Se N - ele pede para o usuário digitar a placa
+  - Se o usuário pressionar outra tecla que não seja Y ou N, o sistema pergunta se o usuário que tentar novamente
+    - Se Y - o sistema volta a perguntar qual a placa
+    - Se N - o sistema volta para o menu 
+-------------------------------------------------------------------------------------------------------------------
+
 # DIO - Trilha .NET - Fundamentos
 www.dio.me
 
