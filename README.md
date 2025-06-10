@@ -1,4 +1,4 @@
-Fiz algumas modificações para melhorar o funcionamento e a interação com o usuário:
+Fiz algumas modificações para melhorar as funcionalidades e a interação com o usuário:
 
 1- Em Adicionar veículos, a mensagem exibe a placa do carro também
 2- Em remover veículos, o sistema pergunta se o usuário deseja visualizar a lista (Y/N)
