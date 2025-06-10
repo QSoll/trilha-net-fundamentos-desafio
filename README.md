@@ -1,18 +1,18 @@
-WEX- END TO END ENGINEERING
+**WEX- END TO END ENGINEERING** <a href=""><img src="logo_wex.jpg" width="60" height="15"></a>  
 
-**DIO - Trilha .NET - Fundamentos** --
-www.dio.me
+**DIO - Trilha .NET - Fundamentos**
+<a href="http://www.dio.me"> <img src= "logo_dio.jpg" width="40" height="15"></a>  
 
-## SISTEMA DE ESTACIONAMENTO
+## SISTEMA DE ESTACIONAMENTO  
 
-## Melhorias no Projeto
+## Melhorias no Projeto  
 Foram feitas algumas modificações no sistema, focadas em aprimorar a experiência do usuário e a eficiência das funcionalidades. As principais alterações incluem:
 - **Adição de opções interativas (Y/N)** para melhorar a navegação e tornar a interação mais intuitiva.
 - **Aprimoramento das funcionalidades** para otimizar o fluxo de execução e oferecer uma experiência mais dinâmica.
 - **Correções de possíveis inconsistências** e ajustes no código para garantir um funcionamento mais estável e eficiente.
 Essas melhorias visam tornar o sistema mais acessível e responsivo, proporcionando uma interação mais fluida. 
 
-**Caso tenha sugestões ou encontre pontos que podem ser refinados, fique à vontade para contribuir! **
+**Caso tenha sugestões ou encontre pontos que podem ser refinados, fique à vontade para contribuir!**  
 
 // PSEUDOCÓDIGO — Próxima Etapa: Criar Fluxograma  
 
