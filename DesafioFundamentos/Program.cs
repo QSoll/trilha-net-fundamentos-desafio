@@ -37,6 +37,7 @@ while (exibirMenu)
     Console.WriteLine("4 - Encerrar");
 
     string opcao = Console.ReadLine();
+    Console.Clear();
 
     switch (opcao)
     {
