@@ -1,0 +1,15 @@
+{
+ "version": "0.2.0",
+ "configurations": [
+ {
+ "name": "Depurar Aplicação",
+ "type": "coreclr",
+ "request": "launch",
+ "preLaunchTask": "build",
+ "program": "${workspaceFolder}/bin/Debug/net6.0/SeuProjeto.dll",
+ "cwd": "${workspaceFolder}",
+ "console": "internalConsole",
+ "stopAtEntry": false
+ }
+ ]
+}
