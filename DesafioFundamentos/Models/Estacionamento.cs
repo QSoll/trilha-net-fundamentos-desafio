@@ -46,6 +46,13 @@ namespace DesafioFundamentos.Models
                 Console.Clear();
 
             }
+            if (escolha != "Y" || escolha != "N")
+            {
+                Console.Clear();
+                Console.WriteLine("Opção inválida. Voltando ao menu...");
+                Thread.Sleep(1500); // Aguarda 1,5 segundos antes de voltar ao menu
+                return;
+            }
             
             Console.WriteLine("Qual veículo quer remover?");
             string placa = Console.ReadLine();
