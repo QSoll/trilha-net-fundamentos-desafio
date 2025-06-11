@@ -5,7 +5,7 @@
 
 ## SISTEMA DE ESTACIONAMENTO  
 
-![Melhorias&ensp;no &ensp;projeto](https://img.shields.io/badge/Melhorias&ensp;no&ensp;projeto-1997B5&?logo=Melhorias&ensp;no&ensp;projeto&logoColor=white&style=for-the-badge) O proposto era completar o código. Além disso, fiz algumas modificações no sistema, focadas em aprimorar a experiência do usuário e a eficiência das funcionalidades. As principais alterações incluem:
+![Melhorias&ensp;no &ensp;projeto](https://img.shields.io/badge/Melhorias&ensp;no&ensp;projeto-1997B5&?logo=Melhorias&ensp;no&ensp;projeto&logoColor=white&style=for-the-badge) O proposto era completar o código. Além disso, fiz algumas modificações focadas em aprimorar a experiência do usuário e a eficiência das funcionalidades. As principais alterações incluem:
 - **Adição de opções interativas (Y/N)** para melhorar a navegação e tornar a interação mais intuitiva.
 - **Aprimoramento das funcionalidades** para otimizar o fluxo de execução e oferecer uma experiência mais dinâmica.
 - **Correções de possíveis inconsistências** e ajustes no código para garantir um funcionamento mais estável e eficiente.
@@ -132,5 +132,5 @@ Por último, deverá ser feito um menu interativo com as seguintes ações imple
 
 ## Até mais !!!
 
-<img src="logo_SM.jpg"> Sol Morcillo
+<img src="logo_SM.jpg" width="120" height="140">
 
