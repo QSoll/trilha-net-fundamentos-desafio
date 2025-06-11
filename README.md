@@ -1,7 +1,7 @@
-**WEX- END TO END ENGINEERING** <a href=""><img src="logo_wex.jpg" width="60" height="15"></a>  
+<a href="https://www.wexinc.com/pt-br/" target="_blank"><img src="logo_wex.jpg" width="60" height="15"></a> **END TO END ENGINEERING**   
 
-**DIO - Trilha .NET - Fundamentos**
-<a href="http://www.dio.me"> <img src= "logo_dio.jpg" width="40" height="15"></a>  
+<a href="http://www.dio.me" target="_blank"> <img src= "logo_dio.jpg" width="40" height="15"></a>  **Trilha .NET - Fundamentos**
+ 
 
 ## SISTEMA DE ESTACIONAMENTO  
 
