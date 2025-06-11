@@ -5,8 +5,7 @@
 
 ## SISTEMA DE ESTACIONAMENTO  
 
-## Melhorias no Projeto  
-Foram feitas algumas modificações no sistema, focadas em aprimorar a experiência do usuário e a eficiência das funcionalidades. As principais alterações incluem:
+![Melhorias&ensp;no &ensp;rojeto](https://img.shields.io/badge/Melhorias&ensp;no&ensp;projeto-1997B5&?logo=Melhorias&ensp;no&ensp;projeto&logoColor=white&style=for-the-badge) Foram feitas algumas modificações no sistema, focadas em aprimorar a experiência do usuário e a eficiência das funcionalidades. As principais alterações incluem:
 - **Adição de opções interativas (Y/N)** para melhorar a navegação e tornar a interação mais intuitiva.
 - **Aprimoramento das funcionalidades** para otimizar o fluxo de execução e oferecer uma experiência mais dinâmica.
 - **Correções de possíveis inconsistências** e ajustes no código para garantir um funcionamento mais estável e eficiente.
@@ -14,7 +13,7 @@ Essas melhorias visam tornar o sistema mais acessível e responsivo, proporciona
 
 **Caso tenha sugestões ou encontre pontos que podem ser refinados, fique à vontade para contribuir!**  
 
-// PSEUDOCÓDIGO — Próxima Etapa: Criar Fluxograma  
+// PSEUDOCÓDIGO => Próxima Etapa: Criar Fluxograma  
 
 INÍCIO  
     Exibir mensagem de boas-vindas  
