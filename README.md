@@ -5,13 +5,13 @@
 
 ## SISTEMA DE ESTACIONAMENTO  
 
-![Melhorias&ensp;no &ensp;rojeto](https://img.shields.io/badge/Melhorias&ensp;no&ensp;projeto-1997B5&?logo=Melhorias&ensp;no&ensp;projeto&logoColor=white&style=for-the-badge) Foram feitas algumas modificações no sistema, focadas em aprimorar a experiência do usuário e a eficiência das funcionalidades. As principais alterações incluem:
+![Melhorias&ensp;no &ensp;projeto](https://img.shields.io/badge/Melhorias&ensp;no&ensp;projeto-1997B5&?logo=Melhorias&ensp;no&ensp;projeto&logoColor=white&style=for-the-badge) O proposto era completar o código. Além disso, fiz algumas modificações no sistema, focadas em aprimorar a experiência do usuário e a eficiência das funcionalidades. As principais alterações incluem:
 - **Adição de opções interativas (Y/N)** para melhorar a navegação e tornar a interação mais intuitiva.
 - **Aprimoramento das funcionalidades** para otimizar o fluxo de execução e oferecer uma experiência mais dinâmica.
 - **Correções de possíveis inconsistências** e ajustes no código para garantir um funcionamento mais estável e eficiente.
 Essas melhorias visam tornar o sistema mais acessível e responsivo, proporcionando uma interação mais fluida. 
 
-**Caso tenha sugestões ou encontre pontos que podem ser refinados, fique à vontade para contribuir!**  
+  
 
 // PSEUDOCÓDIGO => Próxima Etapa: Criar Fluxograma  
 
@@ -88,7 +88,9 @@ FUNÇÃO Encerrar()
 
 FIM  
  
---------------------------------------------------------------------------------
+--------------------------------------------------------------------------------  
+
+**Ponto de partida:** O projeto estava pela metade e o objetivo era faze-lo funcionar conforme descrito abaixo:
 
 ## Desafio de projeto
 Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
@@ -116,12 +118,19 @@ A classe contém três métodos, sendo:
 
 **ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
+Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:  
+1. Cadastrar veículo  
+2. Remover veículo  
+3. Listar veículos  
 4. Encerrar
 
+   ----------------------------------------------------------------------------------------  
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+**Dei continuidade obedecendo as regras** descritas acima, para que no final, tivessemos um programa funcional, mas observei algumas coisas que poderiam ser melhoradas e fui além do proposto, deixando o programa ainda mais funcional.
+
+**Caso tenha sugestões ou encontre pontos que podem ser refinados, fique à vontade para contribuir!**
+
+## Até mais !!!
+
+<img src="logo_SM.jpg"> Sol Morcillo
+
