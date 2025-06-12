@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fluxograma - Classe Estacionamento</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    padding: 20px;
+    margin: 0;
+  }
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+  }
+  .flowchart {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+    gap: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-items: center;
+  }
+  /* Common flowchart box style */
+  .box {
+    padding: 16px 20px;
+    background: white;
+    color: #34495e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 220px;
+    text-align: center;
+    line-height: 1.3;
+    user-select: none;
+  }
+  /* Oval shapes for Start/End */
+  .oval {
+    border-radius: 50% / 100%;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 18px 40px;
+    background: #2980b9;
+    color: white;
+  }
+  /* Rectangle shapes for processes */
+  .process {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  /* Parallelogram shapes for inputs/outputs */
+  .parallelogram {
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    background: #27ae60;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  /* Diamond shapes for decisions */
+  .decision {
+    width: 160px;
+    height: 120px;
+    background: #e67e22;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    text-align: center;
+    user-select: none;
+  }
+  /* Loop shape for repetitive action */
+  .loop {
+    border-radius: 20px 50px 20px 50px;
+    background: #9b59b6;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* Connectors */
+  svg.connector {
+    grid-column: 2 / span 4;
+    overflow: visible;
+  }
+
+  /* Arrows */
+  .arrow {
+    fill: none;
+    stroke: #34495e;
+    stroke-width: 2;
+    marker-end: url(#arrowhead);
+  }
+
+  /* Grid positions for flow */
+  /* Row 1 */
+  #start { grid-column: 3 / 4; grid-row: 1; }
+  #createInstance { grid-column: 3 / 4; grid-row: 2; }
+
+  /* Row 2 - AdicionarVeiculo */
+  #adicionar_msg { grid-column: 1 / 2; grid-row: 3; }
+  #adicionar_input { grid-column: 1 / 2; grid-row: 4; }
+  #adicionar_add { grid-column: 1 / 2; grid-row: 5; }
+  #adicionar_clear { grid-column: 1 / 2; grid-row: 6; }
+  #adicionar_sucesso { grid-column: 1 / 2; grid-row: 7; }
+  #adicionar_wait { grid-column: 1 / 2; grid-row: 8; }
+
+  /* Row 3 - RemoverVeiculo */
+  #remover_msg_listar { grid-column: 3 / 4; grid-row: 3; }
+  #remover_input_listar { grid-column: 3 / 4; grid-row: 4; }
+  #decisao_mostrar_lista { grid-column: 3 / 4; grid-row: 5; }
+  #limpar_ou_invalidar { grid-column: 3 / 4; grid-row: 6; }
+  #decisao_escolha_valida { grid-column: 3 / 4; grid-row: 7; }
+  #perguntar_placa { grid-column: 3 / 4; grid-row: 8; }
+  #ler_placa { grid-column: 3 / 4; grid-row: 9; }
+  #decisao_placa_existe { grid-column: 3 / 4; grid-row: 10; }
+
+  /* Branch Sim placa existe */
+  #digitar_horas { grid-column: 4 / 5; grid-row: 9; }
+  #ler_horas { grid-column: 4 / 5; grid-row: 10; }
+  #calcular_valor { grid-column: 4 / 5; grid-row: 11; }
+  #remover_placa { grid-column: 4 / 5; grid-row: 12; }
+  #limpar_msg_remover { grid-column: 4 / 5; grid-row: 13; }
+  #mensagem_valor { grid-column: 4 / 5; grid-row: 14; }
+  #aguardar_tecla { grid-column: 4 / 5; grid-row: 15; }
+
+  /* Branch Não placa existe */
+  #msg_nao_encontrado { grid-column: 2 / 3; grid-row: 11; }
+  #pergunta_tentar_novamente { grid-column: 2 / 3; grid-row: 12; }
+  #ler_tentativa { grid-column: 2 / 3; grid-row: 13; }
+  #decisao_tentativa { grid-column: 2 / 3; grid-row: 14; }
+  #chamar_remover_recursivo { grid-column: 1 / 2; grid-row: 14; }
+  #voltar_menu { grid-column: 2 / 3; grid-row: 15; }
+  #pausa_1_5s { grid-column: 2 / 3; grid-row: 16; }
+
+  /* Função ListarVeiculos */
+  #decisao_tem_veiculos { grid-column: 5 / 6; grid-row: 3; }
+  #msg_veiculos { grid-column: 5 / 6; grid-row: 4; }
+  #listar_veiculos_loop { grid-column: 5 / 6; grid-row: 5; }
+  #msg_nao_veiculos { grid-column: 5 / 6; grid-row: 6; }
+  #aguardar_tecla_listar { grid-column: 5 / 6; grid-row: 7; }
+
+  /* Fim */
+  #fim { grid-column: 3 / 4; grid-row: 18; }
+</style>
+</head>
+<body>
+<h1>Fluxograma da Classe Estacionamento</h1>
+<div class="flowchart">
+  <!-- Início -->
+  <div class="box oval" id="start">Início</div>
+
+  <!-- Criar Instância -->
+  <div class="box process" id="createInstance">Criar instância da classe Estacionamento<br>(precoInicial e precoPorHora)</div>
+
+  <!-- Adicionar Veículo -->
+  <div class="box process" id="adicionar_msg">Exibir: "Digite a placa do veículo para estacionar:"</div>
+  <div class="box parallelogram" id="adicionar_input">Ler entrada (placa)</div>
+  <div class="box process" id="adicionar_add">Adicionar placa a lista de veículos</div>
+  <div class="box process" id="adicionar_clear">Limpar tela</div>
+  <div class="box process" id="adicionar_sucesso">Exibir: "Veículo {placa} estacionado com sucesso!"</div>
+  <div class="box process" id="adicionar_wait">Aguardar tecla para continuar</div>
+
+  <!-- Remover Veículo -->
+  <div class="box process" id="remover_msg_listar">Exibir: "Deseja exibir a lista de veículos? (Y/N)"</div>
+  <div class="box parallelogram" id="remover_input_listar">Ler entrada (escolha)</div>
+  <div class="box decision" id="decisao_mostrar_lista">Escolha é "Y" ?</div>
+
+  <div class="box process" id="limpar_ou_invalidar">Limpar tela / Exibir lista de veículos / Voltar menu</div>
+  <div class="box decision" id="decisao_escolha_valida">Escolha é "N" ?</div>
+
+  <div class="box process" id="perguntar_placa">Exibir: "Qual veículo quer remover?"</div>
+  <div class="box parallelogram" id="ler_placa">Ler entrada (placa)</div>
+  <div class="box decision" id="decisao_placa_existe">Placa existe na lista?</div>
+
+  <!-- Se placa existe -->
+  <div class="box process" id="digitar_horas">Exibir: "Digite a quantidade de horas que permaneceu estacionado"</div>
+  <div class="box parallelogram" id="ler_horas">Ler entrada (horas)</div>
+  <div class="box process" id="calcular_valor">Calcular valor total = precoInicial + precoPorHora * (horas - 1)</div>
+  <div class="box process" id="remover_placa">Remover placa da lista</div>
+  <div class="box process" id="limpar_msg_remover">Limpar tela</div>
+  <div class="box process" id="mensagem_valor">Exibir preço total e mensagem de remoção</div>
+  <div class="box process" id="aguardar_tecla">Aguardar tecla para continuar</div>
+
+  <!-- Se placa não existe -->
+  <div class="box process" id="msg_nao_encontrado">Exibir: "Placa não encontrada! Deseja tentar novamente? (Y/N)"</div>
+  <div class="box parallelogram" id="pergunta_tentar_novamente">Ler entrada (tentativa)</div>
+  <div class="box decision" id="decisao_tentativa">Tentativa é "Y" ?</div>
+  <div class="box process loop" id="chamar_remover_recursivo">Chamar RemoverVeiculo() novamente</div>
+  <div class="box process" id="voltar_menu">Limpar tela, exibir "Voltando ao menu"</div>
+  <div class="box process" id="pausa_1_5s">Aguardar 1,5 segundos</div>
+
+  <!-- Listar Veículos -->
+  <div class="box decision" id="decisao_tem_veiculos">Há veículos na lista?</div>
+  <div class="box process" id="msg_veiculos">Exibir: "Os veículos estacionados são:"</div>
+  <div class="box loop" id="listar_veiculos_loop">Listar placas dos veículos (loop)</div>
+  <div class="box process" id="msg_nao_veiculos">Exibir: "Não há veículos estacionados."</div>
+  <div class="box process" id="aguardar_tecla_listar">Aguardar tecla para continuar</div>
+
+  <!-- Fim -->
+  <div class="box oval" id="fim">Fim</div>
+</div>
+
+<svg style="position:absolute; width:0; height:0;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+      refX="0" refY="3.5" orient="auto" fill="#34495e">
+      <polygon points="0 0, 10 3.5, 0 7" />
+    </marker>
+  </defs>
+</svg>
+
+<!-- Conexões com SVG para fluidez das setas -->
+<svg class="connector" viewBox="0 0 1100 1300" preserveAspectRatio="none" aria-hidden="true">
+  <!-- Setas verticais e horizontais com curvas para conexão -->
+
+  <!-- Início para Criar Instância -->
+  <path class="arrow" d="M550 80 L550 130" />
+
+  <!-- Criar Instância para Adicionar Veículo (msg) -->
+  <path class="arrow" d="M550 180 L190 250" />
+
+  <!-- Fluxo Add Veículo -->
+  <path class="arrow" d="M190 280 L190 320 L190 350 L190 380 L190 420 L190 450" />
+
+  <!-- Remover Veículo - início -->
+  <path class="arrow" d="M550 200 L550 250" />
+  <path class="arrow" d="M550 280 L550 320" />
+
+  <!-- Decisão mostrar lista Y/N -->
+  <path class="arrow" d="M550 350 L550 370" />
+  <!-- Se sim (Y) para mostrar lista -->
+  <path class="arrow" d="M550 390 L630 390 L630 300" />
+
+  <!-- Se não (N) para limpar tela -->
+  <path class="arrow" d="M550 380 L550 400" />
+
+  <!-- Opção inválida (nem Y nem N) -->
+  <path class="arrow" d="M550 440 L550 470 L550 470 L550 530" />
+
+  <!-- Perguntar placa -->
+  <path class="arrow" d="M550 500 L550 520" />
+  <path class="arrow" d="M550 550 L550 580" />
+
+  <!-- Decisão placa existe -->
+  <path class="arrow" d="M550 610 L550 630" />
+
+  <!-- Se existe placa: branch para direita -->
+  <path class="arrow" d="M650 580 L650 620 L650 660 L650 700 L650 740 L650 780 L650 820 L590 820" />
+
+  <!-- Se placa não existe: branch para esquerda -->
+  <path class="arrow" d="M540 650 L460 650 L460 670 L460 725" />
+  <path class="arrow" d="M460 750 L460 780 L460 820" />
+  <path class="arrow" d="M460 840 L600 840" />
+
+  <!-- Fluxos para tentar novamente ou voltar -->
+  <path class="arrow" d="M370 855 L370 820" />
+  <path class="arrow" d="M470 890 L470 920 L555 920" />
+
+  <!-- Listar Veículos -->
+  <path class="arrow" d="M910 250 L910 280" />
+  <path class="arrow" d="M910 320 L910 350" />
+  <path class="arrow" d="M910 400 L910 430" />
+  <path class="arrow" d="M910 470 L910 500" />
+  <path class="arrow" d="M910 550 L910 580" />
+
+  <!-- Fim do fluxo -->
+  <path class="arrow" d="M550 900 L550 1060" />
+</svg>
+</body>
+</html>
+
